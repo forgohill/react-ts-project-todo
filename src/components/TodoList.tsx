@@ -11,7 +11,7 @@ export const TodoList: React.FC<ITodoListProps> = (props) => {
   const { items, removeTodo, toggleTodo } = props;
 
   return (
-    <div >
+    <div className={`todolist__list-container ${items.length >= 10 ? 'todolist__list-container_onscrollbar' : ''}`}>
       {
         props.items.map(todo => <TodoItem
           key={todo.id}

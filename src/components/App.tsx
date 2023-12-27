@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
+
 import { TodoList } from './TodoList';
 
 import { ITodo } from '../types/date';
-
+import '../vendor/normalize/normalize.scss'
+import './App.scss';
 
 const App: React.FC<{}> = () => {
   const [value, setValue] = useState('');
@@ -48,14 +50,25 @@ const App: React.FC<{}> = () => {
   }, [])
 
   return (
-    <div>
-      <div>
-        <input value={value} onChange={handleChange} ref={inputRef} onKeyDown={handleKeyDown} />
-        <button
-          onClick={addTodo}
-        >add</button>
-        <TodoList items={todos} removeTodo={removeTodo} toggleTodo={toggleTodo} />
-      </div>
+    <div >
+      <main className='main'>
+        <div className='todolist'          >
+          <h1 className="todolist__title">TodoList</h1>
+          <div className="todolist__input-wrapper">
+            <input
+              className='todolist__input'
+              value={value}
+              onChange={handleChange}
+              ref={inputRef}
+              onKeyDown={handleKeyDown} />
+            <button
+              className='todolist__button'
+              onClick={addTodo}
+            >add</button>
+          </div>
+          <TodoList items={todos} removeTodo={removeTodo} toggleTodo={toggleTodo} />
+        </div>
+      </main>
     </div>
   )
 }

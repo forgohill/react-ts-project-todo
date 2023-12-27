@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  font-family: Roboto, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-weight: 100;
+  color: #0D0D0D;
+}
+
+.main {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url(https://images.unsplash.com/photo-1585987014354-a0516fa8832d?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-repeat: repeat-y;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.todolist {
+  width: 80vw;
+  max-height: 100vh;
+  background-color: rgba(240, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    margin: 10px 0 15px;
+    padding: 0 0 0 40px;
+    text-align: center;
+    background: url(../src/image/todolist.svg) left/35px 35px no-repeat;
+  }
+
+  &__input-wrapper {
+    margin: 0;
+    padding: 10px;
+  }
+
+  &__input {
+    margin: 0;
+    padding: 5px 10px;
+    background-color: rgba(240, 255, 255, .5);
+    border: 0;
+    border-radius: 3px;
+
+    &:focus {
+      background-color: rgba(240, 255, 255, .5);
+      border: 0;
+      outline: none;
+      text-decoration: none;
+    }
+
+  }
+
+  &__button {
+    margin: 0 0 0 52px;
+    padding: 5px 20px;
+    border: 0;
+    outline: none;
+    background-color: rgba(240, 255, 255, 0.2);
+    border-radius: 3px;
+
+    &:hover {
+      background-color: cadetblue;
+      cursor: pointer;
+    }
+  }
+
+  &__list-container {
+    &_onscrollbar {
+      max-height: 350px;
+      overflow-y: scroll;
+    }
+
+    &::-webkit-scrollbar {
+      width: 0px;
+    }
+  }
+}
