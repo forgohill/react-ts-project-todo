@@ -1,11 +1,16 @@
 # react-ts-project-todo
 
 Проект знакомство |первое касание| c TypeScript в React. Проект будет исполнятся по видео https://youtu.be/v8i-cv9NUV0?si=yWmrwajI5kQM2K8q\
-Демо приложения [GH-pages](https://forgohill.github.io/react-ts-project-todolist/)
 
+<div id="header" align="center">
+Демо приложения <a target='_blank' rel='noreferrer' href="https://forgohill.github.io/react-ts-project-todolist/"> <img src="https://img.shields.io/badge/gh_pages-2AABED?" alt="Telegram Badge"/>
+</div>
+
+----------------------
 <div id="header" align="center">
   <h1>Приложение <b>TodoList</b></h1>
 </div>
+
 <div align="center">
   <img src="./src/image/prew_readmy.webp" alt="background about me"/>
 </div>
